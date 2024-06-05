@@ -12,10 +12,8 @@
 
 服务启动顺序参考：
 1. api-backend
-2. api-order
-3. api-gateway
-4. api-third-party
-5. api-interface
+2. api-gateway
+3. api-interface
 
 ### 前端
 
