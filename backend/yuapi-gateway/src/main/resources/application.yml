@@ -1,0 +1,38 @@
+server:
+  port: 8090
+spring:
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      default-filters:
+        - AddResponseHeader=source, yupi
+      routes:
+        - id: api_route
+          uri: http://localhost:8123
+          predicates:
+            - Path=/api/**
+#        - id: after_route
+#          uri: https://yupi.icu
+#          predicates:
+#            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+#        - id: after_route
+#          uri: https://www.baidu.com
+#          predicates:
+#            - Before=2024-05-09T11:00:47.789-07:00[America/Denver]
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://localhost:8848
+

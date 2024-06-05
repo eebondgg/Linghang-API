@@ -1,0 +1,16 @@
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+myapi:
+  client:
+    access-key: b0dd3697a192885d7c055db46155b26a
+    secret-key: 84fa3cb56c9e6c3aec283e68919676fc
+spring:
+  application:
+    name: api-interface
+  #注册中心和配置中心的配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
