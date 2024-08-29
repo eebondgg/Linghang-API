@@ -6,7 +6,7 @@
 ### 后端
 
 1. 将各模块配置修改成你自己本地的端口、账号、密码
-2. 启动Nacos、Mysql、Redis、RabbitMq
+2. 启动Nacos、Mysql、Redis
 3. 将公共服务 api-common 以及客户端 SDK 安装到本地仓库
 4. 按顺序启动服务
 
